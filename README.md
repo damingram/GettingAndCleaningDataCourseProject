@@ -5,10 +5,9 @@ Firstly, I'd just like to say that inspecting the TidyDataSet submitted on the c
 saving it as a file, then reading it back into R, ie: data <- read.table(file_path, header = TRUE)
 
 Alternatively, If you right click on a file name in the submission box and copy the web address, you can paste it into a script as follows:
-
-address <- "https://etc..etc.."
-address <- sub("^https", "http", address)
-data <- read.table(url(address), header = TRUE)
+- address <- "https://etc..etc.."
+- address <- sub("^https", "http", address)
+- data <- read.table(url(address), header = TRUE)
 
 ## Running the script.
 
