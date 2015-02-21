@@ -1,6 +1,6 @@
 ## CodeBook, A summarised tidy dataset from a Smartphones Dataset.
 
-## Study Design
+# Study Design
 
 This section describes the the Smartphones Dataset and how it had been collected. It is followed by the Code Book section which
 describes the transformations applied to the Smartphones Dataset and the resulting tidy data set variables. 
@@ -26,7 +26,7 @@ components, was separated using a Butterworth low-pass filter into body accelera
 to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of
 features was obtained by calculating variables from the time and frequency domain. 
 
-# For each record it was provided:
+### For each record it was provided:
 
 * Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 * Triaxial Angular velocity from the gyroscope. 
@@ -34,7 +34,7 @@ features was obtained by calculating variables from the time and frequency domai
 * Its activity label. 
 * An identifier of the subject who carried out the experiment.
 
-# The dataset included the following files:
+### The dataset included the following files:
 
 * 'README.txt'
 * 'features_info.txt': Shows information about the variables used on the feature vector.
@@ -45,7 +45,7 @@ features was obtained by calculating variables from the time and frequency domai
 * 'test/X_test.txt': Test set.
 * 'test/y_test.txt': Test labels.
 
-# The following files were available for the train and test data. Their descriptions are equivalent. 
+### The following files were available for the train and test data. Their descriptions are equivalent. 
 
 * 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample.
 	Its range is from 1 to 30. 
@@ -66,7 +66,7 @@ Notes:
 - Features were normalized and bounded within [-1,1] ... therefore there are no units 
 - Each feature vector was a row on the text file.
 
-# Feature Selection for the Smartphones Dataset
+### Feature Selection for the Smartphones Dataset
 
 The features selected for this database came from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ.
 These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using
@@ -130,13 +130,13 @@ tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
 
-## Code Book
+# Code Book
 
 This section describes the transformations and summaries applied to the Smartphones data set above.
 Then it describes each variable in the tidy data set produced as a result of those transformations and summaries.
 README.md describes how the run_analysis.R script that performs these tasks works.
 
-# Transformations
+## Transformations
 
 The R script called run_analysis.R does the following:
 
@@ -161,7 +161,7 @@ Subject and Activity columns.
 
 (see README.md for specific details)
 
-# Variables
+## Variables
 
 There are 88 variables (columns) and 180 rows in the table produced by the run_analysis.R script.
 The variables are presented here in order starting at column 1.
@@ -172,200 +172,123 @@ were automatically converted to legal, unique, descriptive variable names by the
 There are no units for the quantitative variables below as all the feature values of the data that was summarised, the Smartphones Dataset,
 had been normalized and bounded within [-1,1]. 
 
-VARIABLES					DESCRIPTIONS
-
-Subject
-			id number of the volunteer
-			1 .. 30
-
-Activity
-			descriptive activity names to name the activities in the data set:
-			WALKING
-			WALKING_UPSTAIRS
-			WALKING_DOWNSTAIRS
-			SITTING
-			STANDING
-			LAYING
-
-tBodyAcc.mean...X
-tBodyAcc.mean...Y
-tBodyAcc.mean...Z
-					the means of tBodyAcc-mean() X,Y and Z respectively, grouped by Subject and Activity
-
-tBodyAcc.std...X
-tBodyAcc.std...Y
-tBodyAcc.std...Z
-					the means of tBodyAcc-std() X,Y and Z respectively, grouped by Subject and Activity
-					
-tGravityAcc.mean...X
-tGravityAcc.mean...Y
-tGravityAcc.mean...Z
-					the means of tGravityAcc-mean() X,Y and Z respectively, grouped by Subject and Activity
-					
-tGravityAcc.std...X
-tGravityAcc.std...Y
-tGravityAcc.std...Z
-					the means of tGravityAcc-std() X,Y and Z respectively, grouped by Subject and Activity
-					
-tBodyAccJerk.mean...X
-tBodyAccJerk.mean...Y
-tBodyAccJerk.mean...Z
-					the means of tBodyAccJerk-mean() X,Y and Z respectively, grouped by Subject and Activity
-					
-tBodyAccJerk.std...X
-tBodyAccJerk.std...Y
-tBodyAccJerk.std...Z
-					the means of tBodyAccJerk-std() X,Y and Z respectively, grouped by Subject and Activity
-					
-tBodyGyro.mean...X
-tBodyGyro.mean...Y
-tBodyGyro.mean...Z
-					the means of tBodyGyro-mean() X,Y and Z respectively, grouped by Subject and Activity
-					
-tBodyGyro.std...X
-tBodyGyro.std...Y
-tBodyGyro.std...Z
-					the means of tBodyGyro-std()) X,Y and Z respectively, grouped by Subject and Activity
-
-tBodyGyroJerk.mean...X
-tBodyGyroJerk.mean...Y
-tBodyGyroJerk.mean...Z
-					the means of tBodyGyroJerk-mean() X,Y and Z respectively, grouped by Subject and Activity
-					
-tBodyGyroJerk.std...X
-tBodyGyroJerk.std...Y
-tBodyGyroJerk.std...Z
-					the means of tBodyGyroJerk-std() X,Y and Z respectively, grouped by Subject and Activity
-					
-tBodyAccMag.mean..
-					the means of tBodyAccMag-mean() grouped by Subject and Activity
-					
-tBodyAccMag.std..
-					the means of tBodyAccMag-std() grouped by Subject and Activity
-					
-tGravityAccMag.mean..
-					the means of tGravityAccMag-mean() grouped by Subject and Activity
-					
-tGravityAccMag.std..
-					the means of tGravityAccMag-std() grouped by Subject and Activity
-					
-tBodyAccJerkMag.mean..
-					the means of tBodyAccJerkMag-mean() grouped by Subject and Activity
-					
-tBodyAccJerkMag.std..
-					the means of tBodyAccJerkMag-std() grouped by Subject and Activity
-					
-tBodyGyroMag.mean..
-					the means of tBodyGyroMag-mean() grouped by Subject and Activity
-					
-tBodyGyroMag.std..
-					the means of tBodyGyroMag-std() grouped by Subject and Activity
-					
-tBodyGyroJerkMag.mean..
-					the means of tBodyGyroJerkMag-mean() grouped by Subject and Activity
-					
-tBodyGyroJerkMag.std..
-					the means of tBodyGyroJerkMag-std() grouped by Subject and Activity
-					
-fBodyAcc.mean...X
-fBodyAcc.mean...Y
-fBodyAcc.mean...Z
-					the means of fBodyAcc-mean() X,Y and Z respectively, grouped by Subject and Activity
-					
-fBodyAcc.std...X
-fBodyAcc.std...Y
-fBodyAcc.std...Z
-					the means of fBodyAcc-std() X,Y and Z respectively, grouped by Subject and Activity
-					
-fBodyAcc.meanFreq...X
-fBodyAcc.meanFreq...Y
-fBodyAcc.meanFreq...Z
-					the means of fBodyAcc-meanFreq() X,Y and Z respectively, grouped by Subject and Activity
-					
-fBodyAccJerk.mean...X
-fBodyAccJerk.mean...Y
-fBodyAccJerk.mean...Z
-					the means of fBodyAccJerk-mean() X,Y and Z respectively, grouped by Subject and Activity
-					
-fBodyAccJerk.std...X
-fBodyAccJerk.std...Y
-fBodyAccJerk.std...Z
-					the means of fBodyAccJerk-std() X,Y and Z respectively, grouped by Subject and Activity
-					
-fBodyAccJerk.meanFreq...X
-fBodyAccJerk.meanFreq...Y
-fBodyAccJerk.meanFreq...Z
-						the means of fBodyAccJerk-meanFreq() X,Y and Z respectively, grouped by Subject and Activity
-					
-fBodyGyro.mean...X
-fBodyGyro.mean...Y
-fBodyGyro.mean...Z
-					the means of fBodyGyro-mean() X,Y and Z respectively, grouped by Subject and Activity
-					
-fBodyGyro.std...X
-fBodyGyro.std...Y
-fBodyGyro.std...Z
-					the means of fBodyGyro-std() X,Y and Z respectively, grouped by Subject and Activity
-					
-fBodyGyro.meanFreq...X
-fBodyGyro.meanFreq...Y
-fBodyGyro.meanFreq...Z
-					the means of fBodyGyro-meanFreq() X,Y and Z respectively, grouped by Subject and Activity
-					
-fBodyAccMag.mean..
-					the means of fBodyAccMag-mean() grouped by Subject and Activity
-
-fBodyAccMag.std..
-					the means of fBodyAccMag-std() grouped by Subject and Activity
-
-fBodyAccMag.meanFreq..
-					the means of fBodyAccMag-meanFreq() grouped by Subject and Activity
-
-fBodyBodyAccJerkMag.mean..
-					the means of fBodyBodyAccJerkMag-mean() grouped by Subject and Activity
-
-fBodyBodyAccJerkMag.std..
-						the means of fBodyBodyAccJerkMag-std() grouped by Subject and Activity
-
-fBodyBodyAccJerkMag.meanFreq..
-						the means of fBodyBodyAccJerkMag-meanFreq() grouped by Subject and Activity
-
-fBodyBodyGyroMag.mean..
-					the means of fBodyBodyGyroMag-mean() grouped by Subject and Activity
-
-fBodyBodyGyroMag.std..
-					the means of fBodyBodyGyroMag-std() grouped by Subject and Activity
-
-fBodyBodyGyroMag.meanFreq..
-						the means of fBodyBodyGyroMag-meanFreq() grouped by Subject and Activity
-
-fBodyBodyGyroJerkMag.mean..
-						the means of fBodyBodyGyroJerkMag-mean() grouped by Subject and Activity
-
-fBodyBodyGyroJerkMag.std..
-						the means of fBodyBodyGyroJerkMag-std() grouped by Subject and Activity
-
-fBodyBodyGyroJerkMag.meanFreq..
-						the means of fBodyBodyGyroJerkMag-meanFreq() grouped by Subject and Activity
-
-angle.tBodyAccMean.gravity.
-						the means of angle(tBodyAccMean,gravity) grouped by Subject and Activity
-
-angle.tBodyAccJerkMean..gravityMean.
-						the means of angle(tBodyAccJerkMean),gravityMean) grouped by Subject and Activity
-
-angle.tBodyGyroMean.gravityMean.
-						the means of angle(tBodyGyroMean,gravityMean) grouped by Subject and Activity
-
-angle.tBodyGyroJerkMean.gravityMean.
-							the means of angle(tBodyGyroJerkMean,gravityMean) grouped by Subject and Activity
-
-angle.X.gravityMean.
-					the means of angle(X,gravityMean) grouped by Subject and Activity
-
-angle.Y.gravityMean.
-					the means of angle(Y,gravityMean) grouped by Subject and Activity
-
-angle.Z.gravityMean.
-					the means of angle(Z,gravityMean) grouped by Subject and Activity
+|col| VARIABLE | DESCRIPTION |
+|---|----------|-------------|
+|1|Subject |id number of the volunteer |
+| | | 1 .. 30|
+| | | |
+|2|Activity|descriptive activity names to name the activities in the data set:|
+| | | WALKING|			
+| | | WALKING_UPSTAIRS|			
+| | | WALKING_DOWNSTAIRS|			
+| | | SITTING|			
+| | | STANDING|			
+| | | LAYING|			
+| | | |
+|3|tBodyAcc.mean...X| |
+|4|tBodyAcc.mean...Y|the means of tBodyAcc-mean() X,Y and Z respectively, grouped by Subject and Activity|
+|5|tBodyAcc.mean...Z| |
+|| | |
+|6|tBodyAcc.std...X| |
+|7|tBodyAcc.std...Y|the means of tBodyAcc-std() X,Y and Z respectively, grouped by Subject and Activity|
+|8|tBodyAcc.std...Z| |
+| | | |					
+|9|tGravityAcc.mean...X| |
+|10|tGravityAcc.mean...Y|the means of tGravityAcc-mean() X,Y and Z respectively, grouped by Subject and Activity|
+|11|tGravityAcc.mean...Z| |
+| | | |					
+|12|tGravityAcc.std...X| |
+|13|tGravityAcc.std...Y|the means of tGravityAcc-std() X,Y and Z respectively, grouped by Subject and Activity|
+|14|tGravityAcc.std...Z| |
+| | | |					
+|15|tBodyAccJerk.mean...X| |
+|16|tBodyAccJerk.mean...Y|the means of tBodyAccJerk-mean() X,Y and Z respectively, grouped by Subject and Activity|
+|17|tBodyAccJerk.mean...Z| |
+| | | |					
+|18|tBodyAccJerk.std...X| |
+|19|tBodyAccJerk.std...Y|the means of tBodyAccJerk-std() X,Y and Z respectively, grouped by Subject and Activity|
+|20|tBodyAccJerk.std...Z| |
+| | | |					
+|21|tBodyGyro.mean...X| |
+|22|tBodyGyro.mean...Y|the means of tBodyGyro-mean() X,Y and Z respectively, grouped by Subject and Activity|
+|23|tBodyGyro.mean...Z| |
+| | | |					
+|24|tBodyGyro.std...X| |
+|25|tBodyGyro.std...Y|the means of tBodyGyro-std()) X,Y and Z respectively, grouped by Subject and Activity|
+|26|tBodyGyro.std...Z| |
+| | | |
+|27|tBodyGyroJerk.mean...X| |
+|28|tBodyGyroJerk.mean...Y|the means of tBodyGyroJerk-mean() X,Y and Z respectively, grouped by Subject and Activity|
+|29|tBodyGyroJerk.mean...Z| |
+| | | |					
+|30|tBodyGyroJerk.std...X| |
+|31|tBodyGyroJerk.std...Y|the means of tBodyGyroJerk-std() X,Y and Z respectively, grouped by Subject and Activity|
+|32|tBodyGyroJerk.std...Z| |
+| | | |					
+|33|tBodyAccMag.mean..|the means of tBodyAccMag-mean() grouped by Subject and Activity|
+|34|tBodyAccMag.std..|the means of tBodyAccMag-std() grouped by Subject and Activity|
+|35|tGravityAccMag.mean..|the means of tGravityAccMag-mean() grouped by Subject and Activity|
+|36|tGravityAccMag.std..|the means of tGravityAccMag-std() grouped by Subject and Activity|
+|37|tBodyAccJerkMag.mean..|the means of tBodyAccJerkMag-mean() grouped by Subject and Activity|
+|38|tBodyAccJerkMag.std..|the means of tBodyAccJerkMag-std() grouped by Subject and Activity|
+|39|tBodyGyroMag.mean..|the means of tBodyGyroMag-mean() grouped by Subject and Activity|
+|40|tBodyGyroMag.std..|the means of tBodyGyroMag-std() grouped by Subject and Activity|
+|41|tBodyGyroJerkMag.mean..|the means of tBodyGyroJerkMag-mean() grouped by Subject and Activity|
+|42|tBodyGyroJerkMag.std..|the means of tBodyGyroJerkMag-std() grouped by Subject and Activity|
+| | | |					
+|43|fBodyAcc.mean...X| |
+|44|fBodyAcc.mean...Y|the means of fBodyAcc-mean() X,Y and Z respectively, grouped by Subject and Activity|
+|45|fBodyAcc.mean...Z| |
+| | | |					
+|46|fBodyAcc.std...X| |
+|47|fBodyAcc.std...Y|the means of fBodyAcc-std() X,Y and Z respectively, grouped by Subject and Activity|
+|48|fBodyAcc.std...Z| |
+| | | |					
+|49|fBodyAcc.meanFreq...X| |
+|50|fBodyAcc.meanFreq...Y|the means of fBodyAcc-meanFreq() X,Y and Z respectively, grouped by Subject and Activity|
+|51|fBodyAcc.meanFreq...Z| |
+| | | |					
+|52|fBodyAccJerk.mean...X| |
+|53|fBodyAccJerk.mean...Y|the means of fBodyAccJerk-mean() X,Y and Z respectively, grouped by Subject and Activity|
+|54|fBodyAccJerk.mean...Z| |
+| | | |					
+|55|fBodyAccJerk.std...X| |
+|56|fBodyAccJerk.std...Y|the means of fBodyAccJerk-std() X,Y and Z respectively, grouped by Subject and Activity|
+|57|fBodyAccJerk.std...Z| |
+| | | |					
+|58|fBodyAccJerk.meanFreq...X| |
+|59|fBodyAccJerk.meanFreq...Y|the means of fBodyAccJerk-meanFreq() X,Y and Z respectively, grouped by Subject and Activity|
+|60|fBodyAccJerk.meanFreq...Z| |
+| | | |					
+|61|fBodyGyro.mean...X| |
+|62|fBodyGyro.mean...Y|the means of fBodyGyro-mean() X,Y and Z respectively, grouped by Subject and Activity|
+|63|fBodyGyro.mean...Z| |
+| | | |					
+|64|fBodyGyro.std...X| |
+|65|fBodyGyro.std...Y|the means of fBodyGyro-std() X,Y and Z respectively, grouped by Subject and Activity|
+|66|fBodyGyro.std...Z| |
+| | | |					
+|67|fBodyGyro.meanFreq...X| |
+|68|fBodyGyro.meanFreq...Y|the means of fBodyGyro-meanFreq() X,Y and Z respectively, grouped by Subject and Activity|
+|69|fBodyGyro.meanFreq...Z| |
+| | | |					
+|70|fBodyAccMag.mean..|the means of fBodyAccMag-mean() grouped by Subject and Activity|
+|71|fBodyAccMag.std..|the means of fBodyAccMag-std() grouped by Subject and Activity|
+|72|fBodyAccMag.meanFreq..|the means of fBodyAccMag-meanFreq() grouped by Subject and Activity|
+|73|fBodyBodyAccJerkMag.mean..|the means of fBodyBodyAccJerkMag-mean() grouped by Subject and Activity|
+|74|fBodyBodyAccJerkMag.std..|the means of fBodyBodyAccJerkMag-std() grouped by Subject and Activity|
+|75|fBodyBodyAccJerkMag.meanFreq..|the means of fBodyBodyAccJerkMag-meanFreq() grouped by Subject and Activity|
+|76|fBodyBodyGyroMag.mean..|the means of fBodyBodyGyroMag-mean() grouped by Subject and Activity|
+|77|fBodyBodyGyroMag.std..|the means of fBodyBodyGyroMag-std() grouped by Subject and Activity|
+|78|fBodyBodyGyroMag.meanFreq..|the means of fBodyBodyGyroMag-meanFreq() grouped by Subject and Activity|
+|79|fBodyBodyGyroJerkMag.mean..|the means of fBodyBodyGyroJerkMag-mean() grouped by Subject and Activity|
+|80|fBodyBodyGyroJerkMag.std..|the means of fBodyBodyGyroJerkMag-std() grouped by Subject and Activity|
+|81|fBodyBodyGyroJerkMag.meanFreq..|the means of fBodyBodyGyroJerkMag-meanFreq() grouped by Subject and Activity|
+|82|angle.tBodyAccMean.gravity.|the means of angle(tBodyAccMean,gravity) grouped by Subject and Activity|
+|83|angle.tBodyAccJerkMean..gravityMean.|the means of angle(tBodyAccJerkMean),gravityMean) grouped by Subject and Activity|
+|84|angle.tBodyGyroMean.gravityMean.|the means of angle(tBodyGyroMean,gravityMean) grouped by Subject and Activity|
+|85|angle.tBodyGyroJerkMean.gravityMean.|the means of angle(tBodyGyroJerkMean,gravityMean) grouped by Subject and Activity|
+|86|angle.X.gravityMean.|the means of angle(X,gravityMean) grouped by Subject and Activity|
+|87|angle.Y.gravityMean.|the means of angle(Y,gravityMean) grouped by Subject and Activity|
+|88|angle.Z.gravityMean.|the means of angle(Z,gravityMean) grouped by Subject and Activity|
 					

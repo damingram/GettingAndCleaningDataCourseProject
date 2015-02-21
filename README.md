@@ -1,12 +1,12 @@
 
-## Description of how the run_analysis.R script works.
+# Description of how the run_analysis.R script works.
 
 Firstly, I'd just like to say that inspecting the TidyDataSet submitted on the course project web page is easily done by
 saving it as a file, then reading it back into R, ie: data <- read.table(file_path, header = TRUE)
 
-# Running the script.
+## Running the script.
 
-Please note!, to run the run_analysis.R script successfully you must have installed the 'dplyr' package on your computer!
+**Please note!,** to run the run_analysis.R script successfully you must have installed the 'dplyr' package on your computer!
 (ie in R:  install.packages("dplyr")).
 
 As instructed by the assignment, the script will output a tidy data set as a text file into your working directory!
