@@ -11,6 +11,7 @@ saving it as a file, then reading it back into R, ie: data <- read.table(file_pa
 
 As instructed by the assignment, the script will output a tidy data set as a text file into your working directory!
 The file will be called "TidyDataSetingram.txt". For inspection, the tidy data set can then be read back into R.
+
 (ie   data <- read.table("TidyDataSetingram.txt", header = TRUE) )
 
 The script assumes all required files are in the "UCI HAR Dataset" folder in your working directory

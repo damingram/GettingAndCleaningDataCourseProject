@@ -26,7 +26,7 @@ components, was separated using a Butterworth low-pass filter into body accelera
 to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of
 features was obtained by calculating variables from the time and frequency domain. 
 
-### For each record it was provided:
+##### For each record it was provided:
 
 * Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 * Triaxial Angular velocity from the gyroscope. 
@@ -34,7 +34,7 @@ features was obtained by calculating variables from the time and frequency domai
 * Its activity label. 
 * An identifier of the subject who carried out the experiment.
 
-### The dataset included the following files:
+##### The dataset included the following files:
 
 * 'README.txt'
 * 'features_info.txt': Shows information about the variables used on the feature vector.
@@ -45,7 +45,7 @@ features was obtained by calculating variables from the time and frequency domai
 * 'test/X_test.txt': Test set.
 * 'test/y_test.txt': Test labels.
 
-### The following files were available for the train and test data. Their descriptions are equivalent. 
+##### The following files were available for the train and test data. Their descriptions are equivalent. 
 
 * 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample.
 	Its range is from 1 to 30. 
@@ -73,6 +73,7 @@ These time domain signals (prefix 't' to denote time) were captured at a constan
 a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise.
 Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ)
 using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and
 tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag,
 tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
@@ -82,51 +83,51 @@ fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequ
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+- tBodyAcc-XYZ
+- tGravityAcc-XYZ
+- tBodyAccJerk-XYZ
+- tBodyGyro-XYZ
+- tBodyGyroJerk-XYZ
+- tBodyAccMag
+- tGravityAccMag
+- tBodyAccJerkMag
+- tBodyGyroMag
+- tBodyGyroJerkMag
+- fBodyAcc-XYZ
+- fBodyAccJerk-XYZ
+- fBodyGyro-XYZ
+- fBodyAccMag
+- fBodyAccJerkMag
+- fBodyGyroMag
+- fBodyGyroJerkMag
 
 The set of variables that were estimated from these signals are: 
 
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+- mean(): Mean value
+- std(): Standard deviation
+- mad(): Median absolute deviation 
+- max(): Largest value in array
+- min(): Smallest value in array
+- sma(): Signal magnitude area
+- energy(): Energy measure. Sum of the squares divided by the number of values. 
+- iqr(): Interquartile range 
+- entropy(): Signal entropy
+- arCoeff(): Autorregresion coefficients with Burg order equal to 4
+- correlation(): correlation coefficient between two signals
+- maxInds(): index of the frequency component with largest magnitude
+- meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+- skewness(): skewness of the frequency domain signal 
+- kurtosis(): kurtosis of the frequency domain signal 
+- bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+- angle(): Angle between to vectors.
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
+- gravityMean
+- tBodyAccMean
+- tBodyAccJerkMean
+- tBodyGyroMean
+- tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
 
@@ -155,7 +156,7 @@ The appropriate subject number from subject_train.txt and subject_test.txt table
 were joined as columns at the front of the X train and X test tables formed in step 2 above, to form Subject and Activity variable columns.
 Then the resulting test data frame was was joined to the bottom of the resulting train data frame and rows were ordered by Subject then Activity.
 
-* From this, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+5. From this, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 The data frame from step 4 was converted to a summary table where the column variables represent the means of their values grouped by the
 Subject and Activity columns.
 
