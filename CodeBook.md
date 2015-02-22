@@ -148,8 +148,7 @@ This automatically produced legal, unique, descriptive names (see Variables, bel
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 This was done on the tables from X_train.txt and X_test.txt after step 1 above, by column indexing.
 
-3. Uses descriptive activity names to name the activities in the data set
-Number codes of the y_test.txt and y_train.txt tables were converted into activity labels using the activity_labels.txt table.
+3. Uses descriptive activity names to name the activities in the data set. Number codes of the y_test.txt and y_train.txt tables were converted into activity labels using the activity_labels.txt table.
 
 4. Merges the training and the test sets to create one data set.
 The appropriate subject number from subject_train.txt and subject_test.txt tables and the y activity labels formed from the step 3 above,
@@ -157,7 +156,7 @@ were joined as columns at the front of the X train and X test tables formed in s
 Then the resulting test data frame was was joined to the bottom of the resulting train data frame and rows were ordered by Subject then Activity.
 
 5. From this, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-The data frame from step 4 was converted to a summary table where the column variables represent the mean of their corresponding Smartphones Dataset variable values grouped by the Subject and Activity columns.
+The data frame from step 4 was converted to a summary table where the column variables represent the mean of their corresponding Smartphones Dataset variable values grouped by Subject and Activity.
 
 (see README.md for specific details)
 
