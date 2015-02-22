@@ -170,6 +170,9 @@ The variables are presented here in order starting at column 1.
 Apart from Activity and Subject, the variable names were inherited from the Smartphones Dataset features table (features.txt) and
 were automatically converted to legal, unique, descriptive variable names by the naming process.
 
+** Please note: For variable names in columns 73 to 81 below the 'BodyBody' part of the name is equivalent to 'Body' in the explanation of
+variables above (ie in the Study Design / Feature Selection for the Smartphones Dataset section)** 
+
 There are no units for the quantitative variables below as all the feature values of the data that was summarised, the Smartphones Dataset,
 had been normalized and bounded within [-1,1]. 
 
@@ -276,15 +279,15 @@ had been normalized and bounded within [-1,1].
 |70|fBodyAccMag.mean..|the means of fBodyAccMag-mean() grouped by Subject and Activity|
 |71|fBodyAccMag.std..|the means of fBodyAccMag-std() grouped by Subject and Activity|
 |72|fBodyAccMag.meanFreq..|the means of fBodyAccMag-meanFreq() grouped by Subject and Activity|
-|73|fBodyBodyAccJerkMag.mean..|the means of fBodyBodyAccJerkMag-mean() grouped by Subject and Activity|
-|74|fBodyBodyAccJerkMag.std..|the means of fBodyBodyAccJerkMag-std() grouped by Subject and Activity|
-|75|fBodyBodyAccJerkMag.meanFreq..|the means of fBodyBodyAccJerkMag-meanFreq() grouped by Subject and Activity|
-|76|fBodyBodyGyroMag.mean..|the means of fBodyBodyGyroMag-mean() grouped by Subject and Activity|
-|77|fBodyBodyGyroMag.std..|the means of fBodyBodyGyroMag-std() grouped by Subject and Activity|
-|78|fBodyBodyGyroMag.meanFreq..|the means of fBodyBodyGyroMag-meanFreq() grouped by Subject and Activity|
-|79|fBodyBodyGyroJerkMag.mean..|the means of fBodyBodyGyroJerkMag-mean() grouped by Subject and Activity|
-|80|fBodyBodyGyroJerkMag.std..|the means of fBodyBodyGyroJerkMag-std() grouped by Subject and Activity|
-|81|fBodyBodyGyroJerkMag.meanFreq..|the means of fBodyBodyGyroJerkMag-meanFreq() grouped by Subject and Activity|
+|73|fBodyBodyAccJerkMag.mean..|the means of fBodyBodyAccJerkMag-mean() grouped by Subject and Activity ('BodyBody' part of the name == 'Body')|
+|74|fBodyBodyAccJerkMag.std..|the means of fBodyBodyAccJerkMag-std() grouped by Subject and Activity ('BodyBody' part of the name == 'Body')|
+|75|fBodyBodyAccJerkMag.meanFreq..|the means of fBodyBodyAccJerkMag-meanFreq() grouped by Subject and Activity ('BodyBody' part of the name == 'Body')|
+|76|fBodyBodyGyroMag.mean..|the means of fBodyBodyGyroMag-mean() grouped by Subject and Activity ('BodyBody' part of the name == 'Body')|
+|77|fBodyBodyGyroMag.std..|the means of fBodyBodyGyroMag-std() grouped by Subject and Activity ('BodyBody' part of the name == 'Body')|
+|78|fBodyBodyGyroMag.meanFreq..|the means of fBodyBodyGyroMag-meanFreq() grouped by Subject and Activity ('BodyBody' part of the name == 'Body')|
+|79|fBodyBodyGyroJerkMag.mean..|the means of fBodyBodyGyroJerkMag-mean() grouped by Subject and Activity ('BodyBody' part of the name == 'Body')|
+|80|fBodyBodyGyroJerkMag.std..|the means of fBodyBodyGyroJerkMag-std() grouped by Subject and Activity ('BodyBody' part of the name == 'Body')|
+|81|fBodyBodyGyroJerkMag.meanFreq..|the means of fBodyBodyGyroJerkMag-meanFreq() grouped by Subject and Activity ('BodyBody' part of the name == 'Body')|
 |82|angle.tBodyAccMean.gravity.|the means of angle(tBodyAccMean,gravity) grouped by Subject and Activity|
 |83|angle.tBodyAccJerkMean..gravityMean.|the means of angle(tBodyAccJerkMean),gravityMean) grouped by Subject and Activity|
 |84|angle.tBodyGyroMean.gravityMean.|the means of angle(tBodyGyroMean,gravityMean) grouped by Subject and Activity|
@@ -292,4 +295,4 @@ had been normalized and bounded within [-1,1].
 |86|angle.X.gravityMean.|the means of angle(X,gravityMean) grouped by Subject and Activity|
 |87|angle.Y.gravityMean.|the means of angle(Y,gravityMean) grouped by Subject and Activity|
 |88|angle.Z.gravityMean.|the means of angle(Z,gravityMean) grouped by Subject and Activity|
-					
+
