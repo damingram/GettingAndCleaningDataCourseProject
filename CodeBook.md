@@ -170,8 +170,7 @@ The variables are presented here in order starting at column 1.
 Apart from Activity and Subject, the variable names were inherited from the Smartphones Dataset features table (features.txt) and
 were automatically converted to legal, unique, descriptive variable names by the naming process.
 
-** Please note: For variable names in columns 73 to 81 below the 'BodyBody' part of the name is equivalent to 'Body' in the explanation of
-variables above (ie in the Study Design / Feature Selection for the Smartphones Dataset section)** 
+**Please note: For variable names in columns 73 to 81 below the 'BodyBody' part of the name is equivalent to 'Body' in the explanation of variables above (ie in the Study Design / Feature Selection for the Smartphones Dataset section)** 
 
 There are no units for the quantitative variables below as all the feature values of the data that was summarised, the Smartphones Dataset,
 had been normalized and bounded within [-1,1]. 
